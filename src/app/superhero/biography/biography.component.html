@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="img-div">
+        <img [src]="superhero?.images?.lg" [alt]="superhero?.name">
+    </div>
+    <div style="padding: 3px;text-align: left;">
+        <h4>Name: {{superhero?.name}}</h4>
+        <p><b>Gender:</b> {{superhero?.appearance?.gender | gender}}</p>
+        <p><b>Occupation:</b> {{superhero?.work?.occupation}}</p>
+        <p><b>Base:</b> {{superhero?.work?.base}}</p>
+    </div>
+    <div style="padding: 3px;text-align: left;">
+        <h1>Biography</h1>
+        <h4 *ngFor="let power of superhero?.biography  | keyvalue">
+            <span>{{(power.key) }}:</span><span>{{power.value}}</span>
+        </h4>
+   
+    </div>
+</div>
+
+

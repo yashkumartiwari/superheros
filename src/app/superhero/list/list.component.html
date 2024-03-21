@@ -1,0 +1,28 @@
+<div class="container">
+
+    <input type="text" placeholder="Search Superhero"
+
+    [formControl]="searchString">
+    <div class="card-list" >
+        <div *ngFor="let superhero of superHeroList" class="card" title="Click to open the PowerStates" (click)="superHeroDetail(superhero.id)">
+            <div class="img-div">
+                <img [src]="superhero?.images?.sm" [alt]="superhero?.name">
+            </div>
+            <div style="padding: 3px;">
+                <h4>Name: {{superhero?.name}}</h4>
+                <p><b>Gender:</b> {{superhero?.appearance?.gender | gender}}</p>
+                <p><b>Occupation:</b> {{superhero?.work?.occupation}}</p>
+                <p><b>Base:</b> {{superhero?.work?.base}}</p>
+                <button class="btn" (click)="biography(superhero.id)">Biography</button>
+                <button class="btn " style="margin-left: 5px;" (click)="superHeroDetail(superhero.id)">PowerState</button>
+
+            </div>
+           
+            
+        </div>
+    </div>
+    
+
+</div>
+
+

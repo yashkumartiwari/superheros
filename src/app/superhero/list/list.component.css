@@ -1,0 +1,50 @@
+input{
+    width:400px;
+     height:30px;
+     border-radius: 10px;
+     padding: 3px;
+}
+
+.container{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+}
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+   
+}
+.card{
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 3px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.img-div{
+    width: 100%;
+    height: 200px;
+    overflow: hidden; /* Hide any content that overflows the parent div */
+
+}
+.img-div img {
+    width: 100%; /* Set the width of the image to 100% of the parent div */
+    height: 100%; /* Set the height of the image to 100% of the parent div */
+    object-fit: cover; /* Ensure the image covers the entire space of the parent div */
+  }
+
+  .btn{
+    background-color: #E2F4C5;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+
+  }
